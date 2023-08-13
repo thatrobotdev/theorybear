@@ -3,8 +3,6 @@ import clsx from 'clsx';
 import styles from './styles.module.css';
 import Link from '@docusaurus/Link';
 
-
-
 type musicTheoryBook = 1 | 2 | 3;
 type musicTheoryUnit = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18;
 
@@ -54,7 +52,7 @@ export default function Countdown(): JSX.Element {
 
     let bearMessage = "Puma Pride: There are no upcoming music theory tests. Yay!";
     let buttonMessage = "Brush up on some skills";
-    let buttonLink = "/docs/puma-pride/book-1";
+    let buttonLink = "/docs/category/puma-pride-honors-choir";
 
     if(typeof closestEventDate !== 'undefined' || typeof closestEventBook !== 'undefined' || typeof closestEventUnit !== 'undefined') {
       const daysUntilMusicTheoryTest = Math.ceil((closestEventDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));

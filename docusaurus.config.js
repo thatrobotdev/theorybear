@@ -45,13 +45,6 @@ const config = {
           editUrl:
             'https://github.com/thatrobotdev/theorybear/tree/main/docs',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/thatrobotdev/theorybear/tree/main/blog',
-        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -77,7 +70,6 @@ const config = {
             position: 'left',
             label: 'Theory',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://classroom.google.com',
             label: 'Google Classroom',
@@ -92,8 +84,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Puma Pride',
-                to: '/docs/puma-pride',
+                label: 'Puma Pride Honors Choir',
+                to: '/docs/category/puma-pride-honors-choir',
               },
             ],
           },
@@ -117,10 +109,6 @@ const config = {
           {
             title: 'More',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
               {
                 label: 'GitHub',
                 href: 'https://github.com/thatrobotdev/theorybear',
