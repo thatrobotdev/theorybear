@@ -104,6 +104,10 @@ const config = {
                 label: 'Sight Reading Factory',
                 href: 'https://www.sightreadingfactory.com/',
               },
+              {
+                label: 'Additional Resources',
+                to: '/docs/additional-resources',
+              }
             ],
           },
           {

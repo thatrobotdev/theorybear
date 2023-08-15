@@ -50,7 +50,7 @@ export default function Countdown(): JSX.Element {
         }
     }
 
-    let bearMessage = "Puma Pride: There are no upcoming music theory tests. Yay!";
+    let bearMessage = "There are no upcoming music theory tests (you should probably still double check anyway). Yay!";
     let buttonMessage = "Brush up on some skills";
     let buttonLink = "/docs/category/puma-pride-honors-choir";
 

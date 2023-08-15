@@ -49,6 +49,7 @@ const sidebars = {
         }
       ],
     },
+    'additional-resources'
   ],
 };
 
