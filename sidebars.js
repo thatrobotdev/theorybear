@@ -49,6 +49,24 @@ const sidebars = {
         }
       ],
     },
+    {
+      type: 'category',
+      label: 'Concert Choir',
+      link: {
+        type: 'generated-index',
+      },
+      collapsed: false,
+      items: [
+        {
+          type: 'category',
+          label: 'Unit 1',
+          // link: {type: 'doc', id: 'concert-choir/book-1/unit-1'},
+          items: [
+            'concert-choir/book-1/unit-1/Recognizing, drawing, and describing a staff',
+          ]
+        },
+      ],
+    },
     'additional-resources'
   ],
 };
