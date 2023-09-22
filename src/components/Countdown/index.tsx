@@ -1,5 +1,4 @@
 import React from 'react';
-import clsx from 'clsx';
 import styles from './styles.module.css';
 import Link from '@docusaurus/Link';
 
@@ -16,13 +15,8 @@ const CountdownList: CountdownEvent[] = [
   {
     book: 1,
     unit: 1,
-    date: new Date('2023-08-12'), // dummy date
-  },
-  {
-    book: 1,
-    unit: 2,
-    date: new Date('2023-08-12'), // dummy date
-  },
+    date: new Date('2023-10-06'),
+  }
 ];
 
 export default function Countdown(): JSX.Element {
@@ -50,13 +44,13 @@ export default function Countdown(): JSX.Element {
         }
     }
 
-    let bearMessage = "There are no upcoming music theory tests (you should probably still double check anyway). Yay!";
+    let bearMessage = "There are no upcoming music theory tests for Concert Choir. Yay!";
     let buttonMessage = "Brush up on some skills";
-    let buttonLink = "/docs/category/puma-pride-honors-choir";
+    let buttonLink = "https://theorybear.org/docs/introduction";
 
     if(typeof closestEventDate !== 'undefined' || typeof closestEventBook !== 'undefined' || typeof closestEventUnit !== 'undefined') {
       const daysUntilMusicTheoryTest = Math.ceil((closestEventDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
-        bearMessage = `Puma Pride: Your book ${closestEventBook} unit ${closestEventUnit} music theory test is in ${daysUntilMusicTheoryTest} day`;
+        bearMessage = `Concert Choir: Your book ${closestEventBook} unit ${closestEventUnit} music theory test is in ${daysUntilMusicTheoryTest} day`;
 
         if(daysUntilMusicTheoryTest > 1 || daysUntilMusicTheoryTest == 0) {
             bearMessage += "s";
@@ -65,7 +59,7 @@ export default function Countdown(): JSX.Element {
         bearMessage += "!";
 
         buttonMessage = "Let's get studying!";
-        buttonLink = "/docs/puma-pride/book-" + closestEventBook + "/unit-" + closestEventUnit;
+        buttonLink = "/docs/concert-choir/book-" + closestEventBook + "/unit-" + closestEventUnit + "/A";
     }
 
   return (

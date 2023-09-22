@@ -75,8 +75,13 @@ const config = {
             label: 'Theory',
           },
           {
-            href: 'https://classroom.google.com',
-            label: 'Google Classroom',
+            href: 'https://classroom.google.com/c/NTIzNDU2NTIxMzE4',
+            label: 'Puma Pride GC',
+            position: 'right',
+          },
+          {
+            href: 'https://classroom.google.com/c/NTIzNDU0NDY0NzAy',
+            label: 'Concert Choir GC',
             position: 'right',
           },
         ],
@@ -88,8 +93,16 @@ const config = {
             title: 'Docs',
             items: [
               {
+                label: 'Introduction',
+                to: '/docs/introduction',
+              },
+              {
                 label: 'Puma Pride Honors Choir',
                 to: '/docs/category/puma-pride-honors-choir',
+              },
+              {
+                label: 'Concert Choir',
+                to: '/docs/category/concert-choir',
               },
             ],
           },
@@ -117,6 +130,14 @@ const config = {
           {
             title: 'More',
             items: [
+              {
+                label: "Puma Pride Google Classroom",
+                href: 'https://classroom.google.com/c/NTIzNDU2NTIxMzE4',
+              },
+              {
+                label: "Concert Choir Google Classroom",
+                href: 'https://classroom.google.com/c/NTIzNDU0NDY0NzAy',
+              },
               {
                 label: 'GitHub',
                 href: 'https://github.com/thatrobotdev/theorybear',
