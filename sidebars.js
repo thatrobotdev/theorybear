@@ -70,6 +70,7 @@ const sidebars = {
         },
       ],
     },
+    'singing-tips',
     'additional-resources'
   ],
 };
