@@ -52,6 +52,10 @@ const config = {
     ],
   ],
 
+  // Add MDX v2 support until officially supported: https://github.com/facebook/docusaurus/issues/4029
+  // Safe to remove after Docusarus v3 release, remember to remove "docusaurus-theme-mdx-v2" package
+  themes: ["mdx-v2"],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
