@@ -62,7 +62,10 @@ const sidebars = {
           label: 'Unit 1',
           // link: {type: 'doc', id: 'concert-choir/book-1/unit-1'},
           items: [
-            'concert-choir/book-1/unit-1/Recognizing, drawing, and describing a staff',
+            'concert-choir/book-1/unit-1/A',
+            'concert-choir/book-1/unit-1/B',
+            'concert-choir/book-1/unit-1/C',
+            'concert-choir/book-1/unit-1/D',
           ]
         },
       ],

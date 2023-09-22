@@ -41,7 +41,7 @@ export default function Home(): JSX.Element {
               <h2>JP's Corner ʕ •ᴥ•ʔ</h2>
               <p><i>Hello! I'm JP, the choir TA! In this corner of the site (exact corner subject to change), I'll post briefly what I'm working on!</i></p>
               <p><b>Currently working on:</b> Adding Unit 1 Concert Choir materials!!!</p>
-              <p>I'm so excited to be working with you this year! If you have any questions or feedback, please email me at <a href="mailto:jpkerrane01@bvsd.org">jpkerrane01@bvsd.org</a> or Mr. Henning!</p>
+              <p>I'm so excited to be working with you this year! If you have any questions or feedback, please email me at <a href="mailto:jpkerrane01@bvsd.org">jpkerrane01@bvsd.org</a> or contact Mr. Henning!</p>
           </div>
         </section>
       </main>
