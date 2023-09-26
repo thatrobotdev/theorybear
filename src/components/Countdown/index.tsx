@@ -2,64 +2,91 @@ import React from 'react';
 import styles from './styles.module.css';
 import Link from '@docusaurus/Link';
 
-type musicTheoryBook = 1 | 2 | 3;
-type musicTheoryUnit = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18;
+const today = new Date();
 
-type CountdownEvent = {
-  book: musicTheoryBook;
-  unit: musicTheoryUnit;
+type TestDate = {
+  number: Number;
   date: Date;
 };
 
-const CountdownList: CountdownEvent[] = [
+const PumaPrideTestDates: TestDate[] = [
   {
-    book: 1,
-    unit: 1,
+    number: 1,
     date: new Date('2023-10-06'),
   }
 ];
 
-export default function Countdown(): JSX.Element {
-    const today = new Date();
-    let closestEventDate: Date;
-    let closestEventBook: musicTheoryBook;
-    let closestEventUnit: musicTheoryUnit;
+const ConcertChoirTestDates: TestDate[] = [
+  {
+    number: 1,
+    date: new Date('2023-10-06'),
+  }
+];
 
-    for(let i = 0; i < CountdownList.length; i++) {
-        // Upcoming event must be after today
-        if(CountdownList[i].date > today) {
-            // If closestEvent is undefined, set it to the current event
-            if(typeof closestEventDate == 'undefined') {
-                closestEventDate = CountdownList[i].date;
-                closestEventBook = CountdownList[i].book;
-                closestEventUnit = CountdownList[i].unit;
-            } else if(CountdownList[i].date < closestEventDate) {
-                // If closestEvent is defined, check if the current event is closer than the previous closest event
+function closestEventDate(testDates: TestDate[]): TestDate {
+  let closestEventDate: Date;
+  let closestEventNumber: Number;
 
-                // If it is, set closestEvent to the current event
-                closestEventDate = CountdownList[i].date;
-                closestEventBook = CountdownList[i].book;
-                closestEventUnit = CountdownList[i].unit;
-            }
+  for(let i = 0; i < testDates.length; i++) {
+    // Upcoming event must be after today
+    if(testDates[i].date > today) {
+        // If closestEvent is undefined, set it to the current event
+        if(typeof closestEventDate == 'undefined') {
+            closestEventDate = testDates[i].date;
+            closestEventNumber = testDates[i].number;
+        } else if(testDates[i].date < closestEventDate) {
+            // If closestEvent is defined, check if the current event is closer than the previous closest event
+
+            // If it is, set closestEvent to the current event
+            closestEventDate = testDates[i].date;
+            closestEventNumber = testDates[i].number;
         }
     }
+  }
 
-    let bearMessage = "There are no upcoming music theory tests for Concert Choir. Yay!";
+  const closestTest: TestDate = {
+      date: closestEventDate,
+      number: closestEventNumber,
+  };
+
+  return(closestTest);
+
+}
+
+export default function Countdown(): JSX.Element {
+    const closestPumaPrideTest: TestDate = closestEventDate(PumaPrideTestDates);
+    const closestConcertChoirTest: TestDate = closestEventDate(ConcertChoirTestDates);
+
+    let bearMessage = "Hello!";
     let buttonMessage = "Brush up on some skills";
     let buttonLink = "https://theorybear.org/docs/introduction";
 
-    if(typeof closestEventDate !== 'undefined' || typeof closestEventBook !== 'undefined' || typeof closestEventUnit !== 'undefined') {
-      const daysUntilMusicTheoryTest = Math.ceil((closestEventDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
-        bearMessage = `Concert Choir: Your book ${closestEventBook} unit ${closestEventUnit} music theory test is in ${daysUntilMusicTheoryTest} day`;
+    if(typeof closestPumaPrideTest !== 'undefined' || typeof closestPumaPrideTest !== 'undefined' || typeof closestPumaPrideTest !== 'undefined') {
+      const daysUntilPumaPrideTest = Math.ceil((closestPumaPrideTest.date.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+        bearMessage += ` Puma Pride: Your music theory test ${closestConcertChoirTest.number} is in ${daysUntilPumaPrideTest} day`;
 
-        if(daysUntilMusicTheoryTest > 1 || daysUntilMusicTheoryTest == 0) {
+        if(daysUntilPumaPrideTest > 1 || daysUntilPumaPrideTest == 0) {
             bearMessage += "s";
         }
 
         bearMessage += "!";
 
         buttonMessage = "Let's get studying!";
-        buttonLink = "/docs/category/concert-choir";
+        buttonLink = "/docs/introduction";
+    }
+
+    if(typeof closestConcertChoirTest !== 'undefined' || typeof closestConcertChoirTest !== 'undefined' || typeof closestConcertChoirTest !== 'undefined') {
+      const daysUntilConcertChoirTest = Math.ceil((closestConcertChoirTest.date.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+        bearMessage += ` Concert Choir: Your music theory test ${closestConcertChoirTest.number} is in ${daysUntilConcertChoirTest} day`;
+
+        if(daysUntilConcertChoirTest > 1 || daysUntilConcertChoirTest == 0) {
+            bearMessage += "s";
+        }
+
+        bearMessage += "!";
+
+        buttonMessage = "Let's get studying!";
+        buttonLink = "/docs/introduction";
     }
 
   return (

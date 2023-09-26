@@ -59,11 +59,11 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Unit 1',
-          // link: {type: 'doc', id: 'concert-choir/book-1/unit-1'},
+          label: 'Unit 1: Clefs, staff, lines + spaces, intro to sheet music',
+          link: {type: 'doc', id: 'concert-choir/book-1/unit-1/unit-1'},
           items: [
-            'concert-choir/book-1/unit-1/The Staff',
-            'concert-choir/book-1/unit-1/Treble, Bass Clef',
+            'concert-choir/book-1/unit-1/the-staff',
+            'concert-choir/book-1/unit-1/treble-bass-clef',
           ]
         },
       ],
