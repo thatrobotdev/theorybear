@@ -33,6 +33,10 @@ const config = {
     locales: ['en'],
   },
 
+  plugins: [
+    'my-loaders',
+  ],
+
   presets: [
     [
       'classic',

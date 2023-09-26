@@ -59,7 +59,7 @@ export default function Countdown(): JSX.Element {
         bearMessage += "!";
 
         buttonMessage = "Let's get studying!";
-        buttonLink = "/docs/concert-choir/book-" + closestEventBook + "/unit-" + closestEventUnit + "/A";
+        buttonLink = "/docs/category/concert-choir";
     }
 
   return (
