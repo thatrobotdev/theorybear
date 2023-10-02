@@ -46,6 +46,23 @@ const sidebars = {
               ]
             },
           ]
+        },
+        {
+          type: 'category',
+          label: 'Book 3',
+          link: {
+            type: 'generated-index'
+          },
+          items: [
+            {
+              type: 'category',
+              label: 'Unit 13',
+              link: {type: 'doc', id: 'alfreds-essentials-of-music-theory/book-3/unit-13/unit-13'},
+              items: [
+                'alfreds-essentials-of-music-theory/book-3/unit-13/triads-first-inversion',
+              ]
+            },
+          ]
         }
       ],
     },
