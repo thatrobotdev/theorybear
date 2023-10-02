@@ -106,7 +106,7 @@ const config = {
               },
               {
                 label: 'Concert Choir',
-                to: '/docs/category/concert-choir',
+                to: '/docs/concert-choir',
               },
             ],
           },
