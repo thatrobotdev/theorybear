@@ -53,23 +53,24 @@ const sidebars = {
       type: 'category',
       label: 'Concert Choir',
       link: {
-        type: 'generated-index',
+        type: 'doc', id: 'concert-choir/concert-choir',
       },
       collapsed: false,
       items: [
         {
           type: 'category',
           label: 'Unit 1: Clefs, staff, lines + spaces, intro to sheet music',
-          link: {type: 'doc', id: 'concert-choir/book-1/unit-1/unit-1'},
+          link: {type: 'doc', id: 'concert-choir/unit-1/unit-1'},
           items: [
-            'concert-choir/book-1/unit-1/the-staff',
-            'concert-choir/book-1/unit-1/treble-bass-clef',
+            'concert-choir/unit-1/the-staff',
+            'concert-choir/unit-1/music-notes-clefs',
           ]
         },
       ],
     },
     'singing-tips',
-    'additional-resources'
+    'additional-resources',
+    'how-to-contribute',
   ],
 };
 

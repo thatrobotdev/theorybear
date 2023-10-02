@@ -16,6 +16,13 @@ const PumaPrideTestDates: TestDate[] = [
   }
 ];
 
+const PhoenixFireTestDates: TestDate[] = [
+  {
+    number: 1,
+    date: new Date('2023-10-06'),
+  }
+];
+
 const ConcertChoirTestDates: TestDate[] = [
   {
     number: 1,
@@ -50,19 +57,31 @@ function closestEventDate(testDates: TestDate[]): TestDate {
   };
 
   return(closestTest);
-
 }
 
 export default function Countdown(): JSX.Element {
     const closestPumaPrideTest: TestDate = closestEventDate(PumaPrideTestDates);
     const closestConcertChoirTest: TestDate = closestEventDate(ConcertChoirTestDates);
+    const closestPhoenixFireTest: TestDate = closestEventDate(PhoenixFireTestDates);
+
+    const daysUntilPumaPrideTest = Math.ceil((closestPumaPrideTest.date.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+    const daysUntilConcertChoirTest = Math.ceil((closestConcertChoirTest.date.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+    const daysUntilPhoenixFireTest = Math.ceil((closestPhoenixFireTest.date.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+
+    const buttonLink = "https://theorybear.org/docs/introduction";
 
     let bearMessage = "Hello!";
     let buttonMessage = "Brush up on some skills";
-    let buttonLink = "https://theorybear.org/docs/introduction";
 
-    if(typeof closestPumaPrideTest !== 'undefined' || typeof closestPumaPrideTest !== 'undefined' || typeof closestPumaPrideTest !== 'undefined') {
-      const daysUntilPumaPrideTest = Math.ceil((closestPumaPrideTest.date.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+    if(daysUntilPumaPrideTest == daysUntilConcertChoirTest && daysUntilPumaPrideTest == daysUntilPhoenixFireTest) {
+        bearMessage += ` You have a music theory test in ${daysUntilPumaPrideTest} day`;
+
+        if(daysUntilPumaPrideTest > 1 || daysUntilPumaPrideTest == 0) {
+          bearMessage += "s";
+        }
+
+        bearMessage += "!";
+    } else {
         bearMessage += ` Puma Pride: Your music theory test ${closestConcertChoirTest.number} is in ${daysUntilPumaPrideTest} day`;
 
         if(daysUntilPumaPrideTest > 1 || daysUntilPumaPrideTest == 0) {
@@ -71,14 +90,16 @@ export default function Countdown(): JSX.Element {
 
         bearMessage += "!";
 
-        buttonMessage = "Let's get studying!";
-        buttonLink = "/docs/introduction";
-    }
-
-    if(typeof closestConcertChoirTest !== 'undefined' || typeof closestConcertChoirTest !== 'undefined' || typeof closestConcertChoirTest !== 'undefined') {
-      const daysUntilConcertChoirTest = Math.ceil((closestConcertChoirTest.date.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
         bearMessage += ` Concert Choir: Your music theory test ${closestConcertChoirTest.number} is in ${daysUntilConcertChoirTest} day`;
+        
+        if(daysUntilConcertChoirTest > 1 || daysUntilConcertChoirTest == 0) {
+            bearMessage += "s";
+        }
 
+        bearMessage += "!";
+
+        bearMessage += ` Phoenix Fire: Your music theory test ${closestPhoenixFireTest.number} is in ${daysUntilPhoenixFireTest} day`;
+        
         if(daysUntilConcertChoirTest > 1 || daysUntilConcertChoirTest == 0) {
             bearMessage += "s";
         }
@@ -86,7 +107,6 @@ export default function Countdown(): JSX.Element {
         bearMessage += "!";
 
         buttonMessage = "Let's get studying!";
-        buttonLink = "/docs/introduction";
     }
 
   return (

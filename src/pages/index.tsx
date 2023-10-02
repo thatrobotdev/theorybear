@@ -2,6 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
+import Alert from '@site/src/components/Alert';
 import JpsCorner from '@site/src/components/JPsCorner';
 import Countdown from '@site/src/components/Countdown';
 
@@ -32,6 +33,7 @@ export default function Home(): JSX.Element {
     <Layout
       title={`Hello from ${siteConfig.title}`}
       description="A fun, supplemental guide to music theory education.">
+      <Alert />
       <HomepageHeader />
       <main>
         <JpsCorner />
