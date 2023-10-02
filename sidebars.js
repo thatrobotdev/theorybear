@@ -20,7 +20,7 @@ const sidebars = {
     'introduction',
     {
       type: 'category',
-      label: 'Puma Pride Honors Choir',
+      label: "Alfred's Essentials of Music Theory",
       link: {
         type: 'generated-index',
       },
@@ -28,21 +28,21 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: "Alfred's Essentials of Music Theory: Book 1",
+          label: 'Book 2',
           link: {
             type: 'generated-index'
           },
           items: [
             {
               type: 'category',
-              label: 'Unit 1',
-              link: {type: 'doc', id: 'puma-pride/book-1/unit-1/unit-1'},
+              label: 'Unit 7',
+              link: {type: 'doc', id: 'alfreds-essentials-of-music-theory/book-2/unit-7/unit-7'},
               items: [
-                'puma-pride/book-1/unit-1/lesson-1',
-                'puma-pride/book-1/unit-1/lesson-2',
-                'puma-pride/book-1/unit-1/lesson-3',
-                'puma-pride/book-1/unit-1/lesson-4',
-                'puma-pride/book-1/unit-1/lesson-5',
+                'alfreds-essentials-of-music-theory/book-2/unit-7/tetrachords-major-scales',
+                'alfreds-essentials-of-music-theory/book-2/unit-7/the-sharp-scales',
+                'alfreds-essentials-of-music-theory/book-2/unit-7/the-flat-scales',
+                'alfreds-essentials-of-music-theory/book-2/unit-7/key-signatures-the-sharp-keys',
+                'alfreds-essentials-of-music-theory/book-2/unit-7/key-signatures-the-flat-keys',
               ]
             },
           ]

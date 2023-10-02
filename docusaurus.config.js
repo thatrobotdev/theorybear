@@ -101,8 +101,8 @@ const config = {
                 to: '/docs/introduction',
               },
               {
-                label: 'Puma Pride Honors Choir',
-                to: '/docs/category/puma-pride-honors-choir',
+                label: "Alfred's Essentials of Music Theory",
+                to: '/docs/category/alfreds-essentials-of-music-theory',
               },
               {
                 label: 'Concert Choir',
