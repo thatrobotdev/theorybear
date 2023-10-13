@@ -26,7 +26,7 @@ const PhoenixFireTestDates: TestDate[] = [
 const ConcertChoirTestDates: TestDate[] = [
   {
     number: 1,
-    date: new Date('2023-10-06'),
+    date: new Date('2023-10-13'),
   }
 ];
 
@@ -60,76 +60,88 @@ function closestEventDate(testDates: TestDate[]): TestDate {
 }
 
 export default function Countdown(): JSX.Element {
-    const closestPumaPrideTest: TestDate = closestEventDate(PumaPrideTestDates);
-    const closestConcertChoirTest: TestDate = closestEventDate(ConcertChoirTestDates);
-    const closestPhoenixFireTest: TestDate = closestEventDate(PhoenixFireTestDates);
+  const closestPumaPrideTest: TestDate = closestEventDate(PumaPrideTestDates);
+  const closestConcertChoirTest: TestDate = closestEventDate(ConcertChoirTestDates);
+  const closestPhoenixFireTest: TestDate = closestEventDate(PhoenixFireTestDates);
 
-    const daysUntilPumaPrideTest = Math.ceil((closestPumaPrideTest.date.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
-    const daysUntilConcertChoirTest = Math.ceil((closestConcertChoirTest.date.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
-    const daysUntilPhoenixFireTest = Math.ceil((closestPhoenixFireTest.date.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+  let bearMessage = "Congratulations to 128 Grazer!";
+  let daysUntilPumaPrideTest: number
+  let daysUntilConcertChoirTest: number;
+  let daysUntilPhoenixFireTest: number;
+  
+  if (closestPumaPrideTest.date != undefined) {
+    daysUntilPumaPrideTest = Math.ceil(
+      (closestPumaPrideTest.date.getTime() - today.getTime()) /
+      (1000 * 60 * 60 * 24)
+    );
 
-    const buttonLink = "https://theorybear.org/docs/introduction";
-
-    let bearMessage = "Hello!";
-    let buttonMessage = "Brush up on some skills";
-
-    if(daysUntilPumaPrideTest == daysUntilConcertChoirTest && daysUntilPumaPrideTest == daysUntilPhoenixFireTest) {
-        bearMessage += ` You have a music theory test in ${daysUntilPumaPrideTest} day`;
-
-        if(daysUntilPumaPrideTest > 1 || daysUntilPumaPrideTest == 0) {
-          bearMessage += "s";
-        }
-
-        bearMessage += "!";
-    } else {
-        bearMessage += ` Puma Pride: Your music theory test ${closestConcertChoirTest.number} is in ${daysUntilPumaPrideTest} day`;
-
-        if(daysUntilPumaPrideTest > 1 || daysUntilPumaPrideTest == 0) {
-            bearMessage += "s";
-        }
-
-        bearMessage += "!";
-
-        bearMessage += ` Concert Choir: Your music theory test ${closestConcertChoirTest.number} is in ${daysUntilConcertChoirTest} day`;
-        
-        if(daysUntilConcertChoirTest > 1 || daysUntilConcertChoirTest == 0) {
-            bearMessage += "s";
-        }
-
-        bearMessage += "!";
-
-        bearMessage += ` Phoenix Fire: Your music theory test ${closestPhoenixFireTest.number} is in ${daysUntilPhoenixFireTest} day`;
-        
-        if(daysUntilConcertChoirTest > 1 || daysUntilConcertChoirTest == 0) {
-            bearMessage += "s";
-        }
-
-        bearMessage += "!";
-
-        buttonMessage = "Let's get studying!";
+    bearMessage += ` Puma Pride: Your music theory test ${closestConcertChoirTest.number} is in ${daysUntilPumaPrideTest} day`;
+    if (daysUntilPumaPrideTest > 1 || daysUntilPumaPrideTest == 0) {
+      bearMessage += "s";
     }
+    bearMessage += "!";
+  
+  }
+
+  if (closestConcertChoirTest.date != undefined) {
+    daysUntilConcertChoirTest = Math.ceil(
+      (closestConcertChoirTest.date.getTime() - today.getTime()) /
+      (1000 * 60 * 60 * 24)
+    );
+
+    bearMessage += ` Concert Choir: Your music theory test ${closestConcertChoirTest.number} is in ${daysUntilConcertChoirTest} day`;
+    if (daysUntilConcertChoirTest > 1 || daysUntilConcertChoirTest == 0) {
+      bearMessage += "s";
+    }
+    bearMessage += "!";
+  }
+
+  if (closestPhoenixFireTest.date != undefined) {
+    daysUntilPhoenixFireTest = Math.ceil(
+      (closestPhoenixFireTest.date.getTime() - today.getTime()) /
+      (1000 * 60 * 60 * 24)
+    );
+
+    bearMessage += ` Phoenix Fire: Your music theory test ${closestPhoenixFireTest.number} is in ${daysUntilPhoenixFireTest} day`;
+  }
+
+  if (closestPumaPrideTest.date != undefined && closestConcertChoirTest.date != undefined && closestPhoenixFireTest.date != undefined) {
+    if (daysUntilPumaPrideTest == daysUntilConcertChoirTest && daysUntilPumaPrideTest == daysUntilPhoenixFireTest) {
+      bearMessage += ` You have a music theory test in ${daysUntilPumaPrideTest} day`;
+
+      if (daysUntilPumaPrideTest > 1 || daysUntilPumaPrideTest == 0) {
+        bearMessage += "s";
+      }
+
+      bearMessage += "!";
+    }
+  }
+
+  const buttonLink = "https://theorybear.org/docs/introduction";
+  let buttonMessage = "Let's get studying!";
+  //buttonMessage = "Brush up on some skills";
 
   return (
     <section className={styles.countdown}>
     
-    <div className="container">
+      <div className="container">
         <div className="row">
-            <div className="col">
-                <img src="/img/logo.svg" alt="Countdown" height="100"/>
+          <div className="col">
+            <img src="/img/logo.svg" alt="Countdown" height="100" />
+          </div>
+          <div className="col">
+            <p className={styles.typedOut}>{bearMessage.toString()}</p>
+            <div className={styles.buttons}>
+              <Link
+                className="button button--secondary button--lg"
+                to={buttonLink}>
+                {buttonMessage.toString()}
+              </Link>
             </div>
-            <div className="col">
-                <p className={styles.typedOut}>{bearMessage.toString()}</p>
-                <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to={buttonLink}>
-            {buttonMessage.toString()}
-          </Link>
-        </div>
-            </div>
+          </div>
         </div>
         
-    </div>
+      </div>
     </section>
   );
 }
