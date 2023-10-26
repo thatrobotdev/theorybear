@@ -6,51 +6,52 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'theorybear',
-  tagline: 'A fun, supplemental guide to music theory education.',
-  favicon: 'img/favicon.ico',
+  title: "theorybear",
+  tagline: "A fun, supplemental guide to music theory education.",
+  favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: 'https://theorybear.jameskerrane.com',
+  url: "https://theorybear.jameskerrane.com",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'thatrobotdev', // Usually your GitHub org/user name.
-  projectName: 'theorybear', // Usually your repo name.
+  organizationName: "thatrobotdev", // Usually your GitHub org/user name.
+  projectName: "theorybear", // Usually your repo name.
   trailingSlash: false,
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
-  plugins: [
-    'my-loaders',
-  ],
+  plugins: ["my-loaders"],
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/thatrobotdev/theorybear/tree/main/',
+          editUrl: "https://github.com/thatrobotdev/theorybear/tree/main/",
+        },
+        blog: {
+          blogTitle: "theorybear blog!",
+          blogDescription: "theorybear's blog about music theory, music opportunities, and more!",
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       }),
     ],
@@ -64,87 +65,74 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: 'theorybear',
+        title: "theorybear",
         logo: {
-          alt: 'theorybear logo',
-          src: 'img/logo.svg',
+          alt: "theorybear logo",
+          src: "img/logo.svg",
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'theory',
-            position: 'left',
-            label: 'Theory',
+            type: "docSidebar",
+            sidebarId: "theory",
+            position: "left",
+            label: "Theory",
           },
           {
-            href: 'https://classroom.google.com/c/NTIzNDU2NTIxMzE4',
-            label: 'Puma Pride GC',
-            position: 'right',
-          },
-          {
-            href: 'https://classroom.google.com/c/NTIzNDU0NDY0NzAy',
-            label: 'Concert Choir GC',
-            position: 'right',
+            to: "blog",
+            label: "Blog",
+            position: "left",
           },
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
-            title: 'Docs',
+            title: "Docs",
             items: [
               {
-                label: 'Introduction',
-                to: '/docs/introduction',
+                label: "Introduction",
+                to: "/docs/introduction",
               },
               {
                 label: "Alfred's Essentials of Music Theory",
-                to: '/docs/category/alfreds-essentials-of-music-theory',
+                to: "/docs/category/alfreds-essentials-of-music-theory",
               },
               {
-                label: 'Concert Choir',
-                to: '/docs/concert-choir',
+                label: "Concert Choir",
+                to: "/docs/concert-choir",
               },
             ],
           },
           {
-            title: 'Resources',
+            title: "Resources",
             items: [
               {
-                label: 'musictheory.net',
-                href: 'https://www.musictheory.net/',
+                label: "musictheory.net",
+                href: "https://www.musictheory.net/",
               },
               {
-                label: 'Open Music Theory',
-                href: 'https://viva.pressbooks.pub/openmusictheory/',
+                label: "Open Music Theory",
+                href: "https://viva.pressbooks.pub/openmusictheory/",
               },
               {
-                label: 'Sight Reading Factory',
-                href: 'https://www.sightreadingfactory.com/',
+                label: "Sight Reading Factory",
+                href: "https://www.sightreadingfactory.com/",
               },
               {
-                label: 'Additional Resources',
-                to: '/docs/additional-resources',
-              }
+                label: "Additional Resources",
+                to: "/docs/additional-resources",
+              },
             ],
           },
           {
-            title: 'More',
+            title: "More",
             items: [
               {
-                label: "Puma Pride Google Classroom",
-                href: 'https://classroom.google.com/c/NTIzNDU2NTIxMzE4',
-              },
-              {
-                label: "Concert Choir Google Classroom",
-                href: 'https://classroom.google.com/c/NTIzNDU0NDY0NzAy',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/thatrobotdev/theorybear',
+                label: "GitHub",
+                href: "https://github.com/thatrobotdev/theorybear",
               },
             ],
           },
