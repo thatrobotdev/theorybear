@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktheorybear=self.webpackChunktheorybear||[]).push([[2535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Tour a professional music studio!","permalink":"/blog/music-studio-tour"},{"title":"Record an album with a professional sound engineer!","permalink":"/blog/recording-session"}]}')}}]);
