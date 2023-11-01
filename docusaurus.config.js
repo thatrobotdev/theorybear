@@ -48,7 +48,8 @@ const config = {
         },
         blog: {
           blogTitle: "theorybear blog!",
-          blogDescription: "theorybear's blog about music theory, music opportunities, and more!",
+          blogDescription:
+            "theorybear's blog about music theory, music opportunities, and more!",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -83,6 +84,12 @@ const config = {
             to: "blog",
             label: "Blog",
             position: "left",
+          },
+          {
+            type: "docSidebar",
+            sidebarId: "howToContribute",
+            position: "left",
+            label: "How To Contribute",
           },
         ],
       },

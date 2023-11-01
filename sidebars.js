@@ -247,7 +247,10 @@ const sidebars = {
     },
     "singing-tips",
     "additional-resources",
-    "how-to-contribute",
+  ],
+  howToContribute: [
+    "how-to-contribute/overview",
+    "how-to-contribute/tri-m",
   ],
 };
 

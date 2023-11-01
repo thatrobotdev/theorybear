@@ -1,0 +1,85 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import TheStaffVideoWebm from '../assets/video/The Staff/The Staff.webm';
+import TheStaffVideoThumbnailWebp from '../assets/video/The Staff/The Staff thumbnail.webp';
+import TheStaffVideoThumbnailJpg from '../assets/video/The Staff/The Staff thumbnail.jpg';
+import TheStaffVideoMP4 from '../assets/video/The Staff/The Staff.mp4';
+
+# Tri-M
+
+Are you a member of Peak to Peak Charter School's [Tri-M Music Honor Society](https://nafme.org/student-opportunities/tri-m-music-honor-society/) and want to contribute to the site?
+
+Here are some Tri-M specific volunteering opportunities!
+
+## Make videos for the P2P Community!
+
+[Follow these instructions](https://docs.google.com/document/d/1n6DzlXjy9rgFDP-5kqoCzEmPCkzlVCR5BQBEvt_kYyY/edit?usp=sharing) to make and submit videos to be transferred to the site!
+
+## Video Examples
+Videos in many different styles are uploaded to the site. Not all of them are specific to theorybear. You do not need to emulate the style of the other videos, feel free to make your own!
+
+### theorybear specific
+
+This video was created with a specific page, content, and audience in mind. Because it was created for theorybear itself, it was uploaded and embedded from the [theorybear YouTube channel](https://www.youtube.com/@theorybear). For help uploading your own videos to this YouTube channel (not a requirement for the video to be embedded, you can upload to your own YouTube channel or just send the raw video file), contact JP!
+
+<Tabs>
+  <TabItem value="youtube" label="YouTube" default>
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9NkIWXVRF1w?si=nqK6IlantGfMfjo4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </TabItem>
+  <TabItem value="theorybear" label="theorybear" default>
+    <video controls width="560" height="315" poster={TheStaffVideoThumbnailJpg} preload="none">
+      <picture>
+        <source srcset={TheStaffVideoThumbnailWebp} type="image/webp" />
+        <source srcset={TheStaffVideoThumbnailJpg} type="image/jpeg" />
+        <img src={TheStaffVideoThumbnailJpg} alt="Thumbnail for The Staff video" />
+      </picture>
+      {/* <track default kind="captions" srclang="en" src={useBaseUrl('../captions/The Staff captions.vtt')} /> */}
+      <source src={TheStaffVideoWebm} type="video/webm" />
+      <source src={TheStaffVideoMP4} type="video/mp4" />
+      Download the
+      <a href={TheStaffVideoWebm}>WEBM</a>
+      or
+      <a href={TheStaffVideoMP4}>MP4</a>
+      video.
+  </video>
+  </TabItem>
+</Tabs>
+
+### From around the internet
+
+Sometimes a video on the internet is so useful or engaging that it's a better idea to use it instead of making our own video! For example, this video from Louie Zong that pokes fun at polythythms:
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/a-EI30uucng" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+Videos from the internet are never embedded as a file, only the YouTube video is embedded. For more information, see [Embedding](#embedding).
+
+## Embedding
+
+### YouTube Embeds
+Embedding videos from YouTube is usually allowed by the creator, but YouTube allows creators to prevent embedding of their videos on external sites. If that is the case, please respect that creator's wishes and do not attempt to embed the video on the site. [Follow these instructions](https://support.google.com/youtube/answer/171780?hl=en) to get the video embed code from YouTube, and try to enable "Privacy Enhanced Mode" to prevent the video from loading fully until a user clicks on it.
+
+### File embeds
+When videos are embedded to theorybear, sometimes they will be tabbed like this:
+<Tabs>
+  <TabItem value="youtube" label="YouTube" default>
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9NkIWXVRF1w?si=nqK6IlantGfMfjo4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </TabItem>
+  <TabItem value="theorybear" label="theorybear" default>
+    <video controls width="560" height="315" poster={TheStaffVideoThumbnailJpg} preload="none">
+      <picture>
+        <source srcset={TheStaffVideoThumbnailWebp} type="image/webp" />
+        <source srcset={TheStaffVideoThumbnailJpg} type="image/jpeg" />
+        <img src={TheStaffVideoThumbnailJpg} alt="Thumbnail for The Staff video" />
+      </picture>
+      {/* <track default kind="captions" srclang="en" src={useBaseUrl('../captions/The Staff captions.vtt')} /> */}
+      <source src={TheStaffVideoWebm} type="video/webm" />
+      <source src={TheStaffVideoMP4} type="video/mp4" />
+      Download the
+      <a href={TheStaffVideoWebm}>WEBM</a>
+      or
+      <a href={TheStaffVideoMP4}>MP4</a>
+      video.
+  </video>
+  </TabItem>
+</Tabs>
+
+These embedded videos have both a YouTube version and a version embedded as a file, so that if a user cannot access YouTube or the video is unavailable that there is a backup.

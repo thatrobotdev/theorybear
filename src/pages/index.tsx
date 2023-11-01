@@ -33,7 +33,7 @@ export default function Home(): JSX.Element {
     <Layout
       title={`Hello from ${siteConfig.title}`}
       description="A fun, supplemental guide to music theory education.">
-      {/* <Alert /> */}
+      <Alert />
       <HomepageHeader />
       <main>
         <JpsCorner />
