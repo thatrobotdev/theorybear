@@ -15,10 +15,16 @@ export default function Alert(): JSX.Element {
             </Admonition> 
             */}
         {/* Contributors */}
-        <Admonition type="info" icon="🐻" title="Accepting contributors!">
+        {/* <Admonition type="info" icon="🐻" title="Accepting contributors!">
           <p>
             Are you a Hack Club, Tri-M, or CSHS member? We need you to improve
             this site! <a href="/docs/how-to-contribute/overview">Find out more here.</a>
+          </p>
+        </Admonition> */}
+        {/* Orchestra Concert */}
+        <Admonition type="info" icon="🐻" title="It's concert week!">
+          <p>
+            It's concert week! Check the <a href="/blog">blog</a> for more details about the upcoming concerts!
           </p>
         </Admonition>
       </section>
