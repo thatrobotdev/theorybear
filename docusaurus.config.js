@@ -1,8 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require("prism-react-renderer").themes.github;
+const darkCodeTheme = require("prism-react-renderer").themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -57,10 +57,6 @@ const config = {
       }),
     ],
   ],
-
-  // Add MDX v2 support until officially supported: https://github.com/facebook/docusaurus/issues/4029
-  // Safe to remove after Docusarus v3 release, remember to remove "docusaurus-theme-mdx-v2" package
-  themes: ["mdx-v2"],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
