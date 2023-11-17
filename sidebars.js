@@ -49,7 +49,9 @@ const sidebars = {
                 type: "doc",
                 id: "alfreds-essentials-of-music-theory/book-1/unit-2/unit-2",
               },
-              items: [],
+              items: [
+                "alfreds-essentials-of-music-theory/book-1/unit-2/note-values",
+              ],
             },
             {
               type: "category",
@@ -248,10 +250,7 @@ const sidebars = {
     "singing-tips",
     "additional-resources",
   ],
-  howToContribute: [
-    "how-to-contribute/overview",
-    "how-to-contribute/tri-m",
-  ],
+  howToContribute: ["how-to-contribute/overview", "how-to-contribute/tri-m"],
 };
 
 module.exports = sidebars;
