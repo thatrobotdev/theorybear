@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktheorybear=self.webpackChunktheorybear||[]).push([[3147],{795:e=>{e.exports=JSON.parse('{"label":"opportunities","permalink":"/blog/tags/opportunities","allTagsPath":"/blog/tags","count":2}')}}]);
