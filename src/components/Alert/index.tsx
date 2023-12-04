@@ -22,11 +22,11 @@ export default function Alert(): JSX.Element {
           </p>
         </Admonition> */}
         {/* Orchestra Concert */}
-        <Admonition type="info" icon="🐻" title="It's concert week!">
+        {/* <Admonition type="info" icon="🐻" title="It's concert week!">
           <p>
             It's concert week! Check the <a href="/blog">blog</a> for more details about the upcoming concerts!
           </p>
-        </Admonition>
+        </Admonition> */}
       </section>
     );
 }
