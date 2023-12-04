@@ -1,0 +1,101 @@
+import Admonition from '@theme/Admonition';
+
+# Tutorial: How to add a splash message to the site
+
+:::info
+
+To use all of the tools in this guide, you will need to be 13-years of age or older due to the terms of use of a software tool you will use, [GitHub](https://docs.github.com/en/site-policy/github-terms/github-terms-of-service). If you are under 13-years of age, please email me at [jpkerrane01@bvsd.org](mailto:jpkerrane01@bvsd.org) and we can adjust these steps so you can contribute!
+
+:::
+
+Hello there! In this tutorial, you will learn step-by-step how to add a "Splash" message to the homepage on the [homepage](https://theorybear.org).
+
+You will learn how to:
+* Contribute to a [open-source software project](https://en.wikipedia.org/wiki/Open-source_software_development)
+* Use distributed version control tools like Git, GitHub, and pull requests
+* Create a remote development environment
+
+This guide does not assume any prior software development experience.
+
+## Step 1: Create a development environment
+
+### How the site works
+This site is made with [React](https://react.dev/), a [JavaScript library](https://en.wikipedia.org/wiki/JavaScript_library) that helps in building user interfaces for websites or web applications.
+
+You don't need to know how React works for this tutorial, but the more you know the more of the site's code that you will understand!
+
+If you want to dig deeper into how this site works, the following are free tutorials that will take you from zero-knowledge to a pro!
+
+* If you are unfamiliar with web dvelopment (HTML, CSS), check out [freeCodeCamp's Responsive Web Design Certification](https://www.freecodecamp.org/learn/2022/responsive-web-design/).
+* If you are unfamiliar with JavaScript, check out [freeCodeCamp's JavaScript Algorithms and Data Structures Certification](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/).
+* If you are familiar with JavaScript, check out the [React Quick Start tutorial](https://react.dev/learn) or [freeCodeCamp's Front End Development Libraries Certification](https://www.freecodecamp.org/learn/front-end-development-libraries/).
+
+### How we use React
+
+In conjunction with React, we use a site generator called [Docusarus](https://docusaurus.io/). This is a program that takes input like React-specific files ([.jsx](https://react.dev/learn#writing-markup-with-jsx), [.tsx](https://react.dev/learn/typescript), [.mdx](https://mdxjs.com/)), regular web development files (.html, .css, .js), and text files ([.md](https://www.markdownguide.org/)), to turn into efficient website code!
+
+
+### Finding the site's source code
+
+This site is [open-source](https://en.wikipedia.org/wiki/Open_source), which means that all of the code that makes it function is published for anyone to view.
+
+We publish our site's code to GitHub, a code repository that hosts the source code of countless open source projects, at https://github.com/thatrobotdev/theorybear.
+
+Here is a brief explanation of the structure of the site:
+
+* blog/ – The folder that holds everything that goes on [theorybear's blog](/blog).
+* docs/ – The folder that holds all of the music theory content (including this page)!
+* src/ – The folder that holds site code (React components, CSS, complicated pages like the homepage)
+* static/ – The folder that holds site images and other assets
+* docusaurus.config.js – Main configuration file for the site
+* sidebars.js – File that holds information on how the site's sidebar menu should organize links
+
+Try finding where a specific part of the site is implemented in the code, and see how it is implemented!
+
+### Creating an editable version of the site
+
+Now that you have taken a look at the site's structure, it's time to create an "editable" version of the site, or a development environment.
+
+This will allow you to edit the source code of the site and see a preview of how the site would change with your edit!
+
+You can either create a local or remote development environment, with different pros/cons of each:
+
+**Local development environment**
+Most common type of development environment, runs on your computer. You are required to download all of the tools that make a website work. Great for working without internet, working with your preferred text editor/development tools.
+
+**Remote development environment**
+Gaining in popularity, runs on someone else's computer. This computer can be standardized so the tools you need can be automatically downloaded. If you mess the development environment up, it's easy to reset and undo changes.
+
+For this tutorial, we will be using GitHub Codespaces, a remote development environment that allows you to edit code in your web browser using a modified version of the [Visual Studio Code editor](https://code.visualstudio.com/).
+
+1. Go to the site's source code at https://github.com/thatrobotdev/theorybear
+2. Click the green "Code" button, and navigate to the "Codespaces" tab.
+3. Sign in/Create a new GitHub account.
+4. Click "Create codespace"
+
+You should now be able to see a copy of the website in your web browser that you can navigate through in the explore window. Clicking on a file in the left bar will allow you to edit it.
+
+5. In the bottom window, in the terminal, type in the following command and hit ENTER:
+
+`npm run start`
+
+This command uses the [package manager](https://en.wikipedia.org/wiki/Package_manager) [npm](https://www.npmjs.com/) to download all of the tools that the site needs to build the website from the source code.
+
+6. (window opens)
+
+7. Now it's time to add the splash message! In the left window file explorer, navigate to `src/components/Splash/index.tsx`. Find the code that looks like this:
+
+```js
+let splashMessages = [
+  ["You've got this!", "JP"],
+  ["Need more cowbell!", "JP"],
+  ["Beary fun music theory ;)", "JP"],
+  ["Every Good Bear Does Fine", "JP"],
+  ["FACE!!!!!", "JP"],
+  ["Arctic Cubs Explore Glaciers :)", "JP"]
+];
+```
+
+This is the code that the website randomizes to display a splash message.
+
+The first string in the JavaScript array is the message, and the second string is the attribution.
