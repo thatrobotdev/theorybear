@@ -2,16 +2,17 @@ import React from 'react';
 import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
+import Link from "@docusaurus/Link";
 import Alert from '@site/src/components/Alert';
 import JpsCorner from '@site/src/components/JPsCorner';
-import Countdown from '@site/src/components/Countdown';
+import Splash from '@site/src/components/Splash';
 
 import styles from './index.module.css';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
         <div className="row">
           <div className="col">
@@ -19,7 +20,15 @@ function HomepageHeader() {
             <p className="hero__subtitle">{siteConfig.tagline}</p>
           </div>
           <div className="col">
-            <Countdown />
+            <Splash />
+            <div className={styles.buttons}>
+              <Link
+                className="button button--secondary button--lg"
+                to="https://theorybear.org/docs/introduction"
+              >
+                {"Let's get studying!"}
+              </Link>
+            </div>
           </div>
         </div>
       </div>

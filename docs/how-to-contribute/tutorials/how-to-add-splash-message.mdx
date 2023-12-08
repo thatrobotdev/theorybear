@@ -1,0 +1,96 @@
+import Admonition from '@theme/Admonition';
+
+# Tutorial: How to add a splash message to the site
+
+:::info
+
+To use all of the tools in this guide, you will need to be 13-years of age or older due to the terms of use of a software tool you will use, [GitHub](https://docs.github.com/en/site-policy/github-terms/github-terms-of-service). If you are under 13-years of age, please email me at [jpkerrane01@bvsd.org](mailto:jpkerrane01@bvsd.org) and we can adjust these steps so you can contribute!
+
+:::
+
+Hello there! In this tutorial, you will learn step-by-step how to add a "Splash" message to the homepage on the [homepage](https://theorybear.org) using GitHub codespaces.
+
+## Step 1: Fork the repository
+To start, [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the repository. A fork is a copy of the source code that you are free to edit, and later merge into the actual site! To do that:
+1. Navigate to https://github.com/thatrobotdev/theorybear
+2. Click the Fork button.
+3. Click "Create fork"
+
+## Step 2: Create a GitHub codespace for the site
+
+To start edtiting the site, you will be creating a **remote development environment** This is a computer running on GitHub's servers that downloads the source code of the site and allows you to edit a version of the website in your web browser!
+
+1. Navigate to your fork (usually, https://github.com/[username]/theorybear)
+2. Click the green "Code" button, and navigate to the "Codespaces" tab.
+3. Sign in/Create a new GitHub account.
+4. Click "Create codespace"
+
+You should now be able to see a copy of the website in your web browser that you can navigate through in the explore window. Clicking on a file in the left bar will allow you to edit it.
+
+## Step 3: Install the site's dependencies and start a development server
+
+Now is the time to install the packages like [docusarus](https://docusaurus.io/) and [React](https://react.dev/) that allow the site to run!
+
+1. In the bottom window, in the terminal, type in the following command and hit ENTER:
+
+`npm install`
+
+This command uses the [package manager](https://en.wikipedia.org/wiki/Package_manager) [npm](https://www.npmjs.com/) to download all of the tools that the site needs to build the website from the source code.
+
+2. Run `npm run start` to start a development server. You will see a pop-up asking to open a new window. Accept this, and you will see a live-updating version of the site that changes when you change the source code in the GitHub codespaces window!
+
+### Step 4: Add the splash message
+
+Now it's time to add the splash message! In the left window file explorer, navigate to `src/components/Splash/index.tsx`. Find the code that looks like this:
+
+```js
+let splashMessages = [
+  ["You've got this!", "JP"],
+  ["Need more cowbell!", "JP"],
+  ["Beary fun music theory ;)", "JP"],
+  ["Every Good Bear Does Fine", "JP"],
+  ["FACE!!!!!", "JP"],
+  ["Arctic Cubs Explore Glaciers :)", "JP"]
+];
+```
+
+This is the code that the website randomizes to display a splash message.
+
+The first string in the JavaScript array is the message, and the second string is the attribution. Add an element to the array with your unique splash message, and add your first name to the second string in the array.
+
+```js
+let splashMessages = [
+  ["You've got this!", "JP"],
+  ["Need more cowbell!", "JP"],
+  ["Beary fun music theory ;)", "JP"],
+  ["Every Good Bear Does Fine", "JP"],
+  ["FACE!!!!!", "JP"],
+  ["Arctic Cubs Explore Glaciers :)", "JP"],
+  ["Open source!!", "JP"]
+];
+```
+
+### Step 5: Create a pull request to add your changes to the site
+
+Now that you have edited your local version of the site, it's time to create a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) to add your change to the site!
+
+1. In VSCode, navigate to the [Source Code tab](https://code.visualstudio.com/docs/sourcecontrol/overview) on the left panel.
+2. Enter a message in the message box that describes your changes, like "Added splash message".
+3. On the green "Confirm" button, click the arrow on the side to open more actions, clicking "Confirm and Create Pull Request". If you are asked to stage all your changes and commit them directly, hit "Yes".
+4. On the pull request screen, create a title for the pull request that describes all of your changes, and add a description if needed.
+5. Click "Create"
+
+### Step 6: 🎉 Wait for Pull Request approval, and celebrate
+
+If you navigate to https://github.com/thatrobotdev/theorybear/pulls, you should see your pull request in the list on the main repository! This will be reviewed by project maintainers, and then if accepted, merged into the main site!
+
+Thank you very much for your contribution!
+
+### Further resources
+
+If you want to learn more about open-source development, we recommend these resources to get started!
+
+- [Git and GitHub learning resources](https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources)
+- [freeCodeCamp: Web Design, JavaScript, React, and more!](https://www.freecodecamp.org/)
+- [React](https://react.dev/learn)
+- [Docusaurus](https://docusaurus.io/docs)
