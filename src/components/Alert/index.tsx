@@ -27,6 +27,11 @@ export default function Alert(): JSX.Element {
             It's concert week! Check the <a href="/blog">blog</a> for more details about the upcoming concerts!
           </p>
         </Admonition> */}
+        <Admonition type="info" icon="🐻" title="Coming soon: theorybear wiki!">
+          <p>
+            This site is migrating to a wiki platform, which will make pages easier to edit! Pardon our dust :)
+          </p>
+        </Admonition>
       </section>
     );
 }
