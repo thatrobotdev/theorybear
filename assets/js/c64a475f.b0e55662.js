@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktheorybear=self.webpackChunktheorybear||[]).push([[2825],{6921:e=>{e.exports=JSON.parse('{"label":"high-school","permalink":"/theorybear/blog/tags/high-school","allTagsPath":"/theorybear/blog/tags","count":2,"unlisted":false}')}}]);

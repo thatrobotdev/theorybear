@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktheorybear=self.webpackChunktheorybear||[]).push([[210],{8625:e=>{e.exports=JSON.parse('{"label":"p2p","permalink":"/theorybear/blog/tags/p-2-p","allTagsPath":"/theorybear/blog/tags","count":2,"unlisted":false}')}}]);
