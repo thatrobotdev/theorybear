@@ -1,3 +1,7 @@
+theorybear has now migrated to a new website codebase. This old codebase is now archived. Check out the new site at [theorybear.org](https://theorybear.org)!
+
+---
+
 # theorybear
 
 <img src="static/img/logo.svg" alt="A bear emoji" height="100">
