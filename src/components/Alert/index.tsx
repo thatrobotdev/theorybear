@@ -29,7 +29,7 @@ export default function Alert(): JSX.Element {
         </Admonition> */}
         <Admonition type="info" icon="🐻" title="Coming soon: theorybear wiki!">
           <p>
-            This site is migrating to a wiki platform, which will make pages easier to edit! Pardon our dust :)
+            theorybear has now migrated to a new website! This old website is now archived, and is not updated. P2P Students: check out the new site at <a href="https://theorybear.org">theorybear.org</a>!
           </p>
         </Admonition>
       </section>
