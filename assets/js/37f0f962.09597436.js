@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktheorybear=self.webpackChunktheorybear||[]).push([[3579],{9796:e=>{e.exports=JSON.parse('{"label":"opportunities","permalink":"/theorybear/blog/tags/opportunities","allTagsPath":"/theorybear/blog/tags","count":2,"unlisted":false}')}}]);

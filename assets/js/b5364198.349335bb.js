@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktheorybear=self.webpackChunktheorybear||[]).push([[3704],{6979:e=>{e.exports=JSON.parse('[{"label":"p2p","permalink":"/theorybear/blog/tags/p-2-p","count":2},{"label":"high-school","permalink":"/theorybear/blog/tags/high-school","count":2},{"label":"opportunities","permalink":"/theorybear/blog/tags/opportunities","count":2}]')}}]);
