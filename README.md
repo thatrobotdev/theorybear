@@ -1,4 +1,4 @@
-theorybear has now migrated to a new website codebase. This old codebase is now archived. Check out the new site at [theorybear.org](https://theorybear.org)!
+theorybear has now migrated to a new website codebase. The new site is password protected to protect the students which use it, but you can access the old, non-protected site at [https://old.theorybear.org](https://old.theorybear.org). If you are a Peak to Peak Charter School student, please check out the new website at https://theorybear.org!
 
 ---
 
